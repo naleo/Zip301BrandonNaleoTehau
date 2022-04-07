@@ -191,8 +191,14 @@ void outputHeader(ofstream& ofs) {
 		if (c == '\n') {
 			cOut = "newline";
 		}
+		else if (c == '\r') {
+			cOut = "return";
+		}
 		else if (c == ' ') {
 			cOut = "space";
+		}
+		else if (c == '\t') {
+			cOut = "tab";
 		}
 		else {
 			cOut = c;

@@ -1,4 +1,4 @@
-#include "Node.h"
+#include "../Zip301BrandonNaleoTehau/Node.h"
 
 int Node::getId()
 {
@@ -41,11 +41,18 @@ Node::Node(int i, char c)
 	letter = c;
 	leftChild = nullptr;
 	rightChild = nullptr;
+	typeLeaf = true;
+}
+
+bool Node::isLeaf()
+{
+	return typeLeaf;
 }
 
 Node::Node(int i) 
 {
 	id = i;
+	typeLeaf = false;
 	leftChild = nullptr;
 	rightChild = nullptr;
 }
